@@ -32,11 +32,10 @@ from-purple-950 to-gray-900  overflow-hidden "
       </div>
         <About/>
       </div>
-      <div className="m-8 shadow-black hover:shadow-2xl hover:scale-105 hover:duration-700 transition-transform duration-300 
-      rounded-2xl md:mx-16  ">
-        <Projects />
+      <div  className="m-8  md:mx-16  ">
+        <Projects  />
       </div>
-      <div className="m-8 shadow-black hover:shadow-2xl hover:scale-105 hover:duration-700 transition-transform duration-300 
+      <div className="m-8 
       rounded-2xl md:mx-16  ">
           <Contact />
       </div>

@@ -37,10 +37,8 @@ export const Contact = () => {
     <div
       id="contact"
     >
-      <div className="flex flex-col md:flex-row items-center justify-around gap-10
-        bg-gradient-to-r from-indigo-950 to-fuchsia-950
-        border border-white/20 rounded-2xl p-8
-        shadow-[0_0_20px_rgba(140,80,255,0.3)]">
+      <div className="flex flex-col md:flex-row items-center justify-around gap-10 p-8
+        ">
 
         {/* Left Image */}
         <div className="w-full md:w-1/2 max-w-md">
@@ -54,7 +52,7 @@ export const Contact = () => {
         {/* Contact Form */}
         <div className="w-full md:w-1/2 max-w-md
           bg-white/10 backdrop-blur-md
-          border border-white/20 rounded-2xl p-6
+          border border-white/20 rounded-2xl p-6 hover:scale-102 duration-300
           text-white shadow-[0_0_20px_rgba(140,80,255,0.3)]">
 
           <h2 className="text-3xl font-bold text-center mb-6

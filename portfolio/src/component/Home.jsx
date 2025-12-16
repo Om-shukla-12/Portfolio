@@ -44,11 +44,13 @@ const Home = () => {
           hover:scale-105 hover:shadow-xl transition"
         >
           <a
-            href="#projects"
+            href="resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-bold text-transparent bg-clip-text
             bg-gradient-to-r from-purple-400 to-blue-400"
           >
-            View My Projects
+            View My Resume
           </a>
         </div>
       </div>

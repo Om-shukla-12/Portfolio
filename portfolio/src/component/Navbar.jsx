@@ -16,7 +16,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <a
-          href="#home"
+          href="/"
           className="text-transparent bg-clip-text bg-gradient-to-r
           from-purple-400 to-blue-400 font-bold text-2xl"
         >

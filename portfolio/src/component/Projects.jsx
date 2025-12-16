@@ -37,7 +37,7 @@ const projDetails = [
 
 export const Projects = () => {
   return (
-    <div id='projects' className='border border-white/20 rounded-2xl bg-gradient-to-r from-violet-950  to-gray-900 my-16 px-6 md:px-16'>
+    <div id='projects' className='w-full   bg-gradient-to-r from-violet-950  to-gray-900 my-16 px-6 md:px-16'>
         <h2 className='font-bold text-3xl text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400'>
             Projects
         </h2>
