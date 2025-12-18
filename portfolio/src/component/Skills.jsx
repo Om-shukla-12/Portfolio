@@ -4,8 +4,8 @@ import {
   FaCss3Alt,
   FaJs,
   FaReact,
-  FaNodeJs,
-  FaGitAlt,
+  // FaNodeJs,
+  // FaGitAlt,
 } from "react-icons/fa";
 import { SiTailwindcss, SiGithub } from "react-icons/si";
 
