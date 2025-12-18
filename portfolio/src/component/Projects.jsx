@@ -36,13 +36,13 @@ const projDetails = [
 
 
 export const Projects = () => {
-  return (
-    <div id='projects' className='w-full   bg-gradient-to-r from-violet-950  to-gray-900 my-16 px-6 md:px-16'>
-        <h2 className='font-bold text-3xl text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400'>
+  return (<>
+    <div id='projects' className='my-16 px-6 md:px-16'>
+        <h2 className='font-bold text-3xl text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400'>
             Projects
         </h2>
 
-        <div className='max-w-8xl mx-auto p-6 flex flex-col gap-8  backdrop-blur-md '>
+        <div className='max-w-8xl mx-auto p-6 flex flex-col gap-4  backdrop-blur-md '>
          {projDetails.map((proj,index)=> (
           <div key={index} className='mb-8 flex flex-row gap-6  border border-white/20 rounded-2xl p-6 shadow-[0_0_20px_rgba(140,80,255,0.3)] hover:scale-105 hover:shadow-2xl transition-transform duration-300
           flex-wrap md:flex-nowrap justify-between items-center'>
@@ -62,7 +62,7 @@ export const Projects = () => {
          ))}
         </div>
     </div>
-
+</>
   )
 }
 

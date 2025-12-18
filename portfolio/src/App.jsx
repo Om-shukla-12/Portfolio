@@ -5,6 +5,7 @@ import About from "./component/About";
 import {Projects} from "./component/Projects";
 import { Contact } from "./component/Contact";
 import Footer from "./component/Footer";
+import Skills from "./component/Skills";
 
 const App = () => {
   const sentence = "Welcome to My Portfolio";
@@ -31,9 +32,11 @@ from-purple-950 to-gray-900  overflow-hidden "
         <Home />
       </div>
         <About/>
+        <Skills/>
       </div>
-      <div  className="m-8  md:mx-16  ">
-        <Projects  />
+      <div className="m-8 
+      rounded-2xl md:mx-16  ">
+        <Projects />
       </div>
       <div className="m-8 
       rounded-2xl md:mx-16  ">
