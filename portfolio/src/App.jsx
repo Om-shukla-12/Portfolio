@@ -19,13 +19,21 @@ from-purple-950 to-gray-900  overflow-hidden "
         <Navbar />
       </header>
       <div className="text-center mt-4">
-        <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">{sentence.split("").map((char,index) => (
-          <span key={index} className="inline-block transition-transform duration-300 hover:scale-150">
-            {
-              char=== " " ? "\u00A0" : char
-          }</span>
-        ))}</h1>
-      </div>
+  <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text 
+  bg-gradient-to-r from-purple-400 to-blue-400 overflow-visible">
+
+    {sentence.split("").map((char, index) => (
+      <span
+        key={index}
+        className="inline-block p-0.2 transition-transform duration-300 hover:scale-150 hover:text-white  "
+      >
+        {char === " " ? "\u00A0" : char}
+      </span>
+    ))}
+
+  </h1>
+</div>
+
       <div>
       <div className="m-8 shadow-black hover:shadow-2xl hover:scale-105 hover:duration-700 transition-transform duration-300 
       rounded-2xl md:mx-16  ">

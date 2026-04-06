@@ -55,7 +55,7 @@ const Home = () => {
           hover:scale-105 hover:shadow-xl"
         >
           <a
-            href="resume.pdf"
+            href="myresume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-transparent bg-clip-text
