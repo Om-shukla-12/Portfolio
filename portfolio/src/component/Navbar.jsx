@@ -1,74 +1,80 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50
-      w-[92%] md:w-[85%] lg:w-[75%]
-      backdrop-blur-md bg-white/10 border border-white/20
-      rounded-2xl px-6 py-4
-      shadow-[0_0_20px_rgba(140,80,255,0.3)]"
-    >
-      {/* Navbar Container */}
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[85%] lg:w-[75%] backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-6 py-4 shadow-[0_4px_30px_rgba(140,80,255,0.2)]">
       <div className="flex justify-between items-center">
-        
         {/* Logo */}
         <a
-          href="/"
-          className="text-transparent bg-clip-text bg-gradient-to-r
-          from-purple-400 to-blue-400 font-bold text-2xl"
+          href="#home"
+          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 font-bold text-2xl tracking-wide"
         >
           Om Shukla
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-300">
-          <li><a href="#home" className="hover:text-white">Home</a></li>
-          <li><a href="#about" className="hover:text-white">About</a></li>
-          <li><a href="#projects" className="hover:text-white">Projects</a></li>
-          <li><a href="#contact" className="hover:text-white">Contact</a></li>
+        <ul className="hidden md:flex space-x-8 text-gray-300 font-medium">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className="hover:text-white transition-colors duration-300 hover:text-purple-400"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Button */}
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-2xl focus:outline-none"
           onClick={() => setOpen(!open)}
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <ul
-          className="md:hidden mt-6 space-y-4 text-center
-          bg-white/10 backdrop-blur-md
-          border border-white/20 rounded-xl p-4 text-gray-300"
-        >
-          <li>
-            <a href="#home" onClick={() => setOpen(false)} className="block hover:text-white">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={() => setOpen(false)} className="block hover:text-white">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={() => setOpen(false)} className="block hover:text-white">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => setOpen(false)} className="block hover:text-white">
-              Contact
-            </a>
-          </li>
-        </ul>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: "auto" }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden mt-4 space-y-4 text-center overflow-hidden"
+          >
+            {navLinks.map((link) => (
+              <motion.li
+                key={link.name}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <a
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block text-gray-300 hover:text-white py-2 text-lg font-medium border-b border-white/5"
+                >
+                  {link.name}
+                </a>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

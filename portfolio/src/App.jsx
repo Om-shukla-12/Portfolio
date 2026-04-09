@@ -2,57 +2,37 @@ import React from "react";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home";
 import About from "./component/About";
-import {Projects} from "./component/Projects";
+import Experience from "./component/Experience";
+import { Projects } from "./component/Projects";
 import { Contact } from "./component/Contact";
 import Footer from "./component/Footer";
 import Skills from "./component/Skills";
+import { motion } from "framer-motion";
 
 const App = () => {
-  const sentence = "Welcome to My Portfolio";
   return (
-  
-    <div
-      className="relative min-h-screen w-full   px-6 md:px-10 py-5 bg-gradient-to-r
-from-purple-950 to-gray-900  overflow-hidden "
-    >
-      <header className="mb-18">
+    <div className="relative min-h-screen w-full bg-[#030014] overflow-hidden text-gray-100 flex flex-col font-sans">
+      {/* Background glow effects */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/20 blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]"></div>
+      </div>
+
+      <header className="z-50 border-b border-transparent">
         <Navbar />
       </header>
-      <div className="text-center mt-4">
-  <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text 
-  bg-gradient-to-r from-purple-400 to-blue-400 overflow-visible">
 
-    {sentence.split("").map((char, index) => (
-      <span
-        key={index}
-        className="inline-block p-0.2 transition-transform duration-300 hover:scale-150 hover:text-white  "
-      >
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ))}
-
-  </h1>
-</div>
-
-      <div>
-      <div className="m-8 shadow-black hover:shadow-2xl hover:scale-105 hover:duration-700 transition-transform duration-300 
-      rounded-2xl md:mx-16  ">
+      <main className="flex-grow w-full flex flex-col items-center justify-center">
         <Home />
-      </div>
-        <About/>
-        <Skills/>
-      </div>
-      <div className="m-8 
-      rounded-2xl md:mx-16  ">
+        <About />
+        <Experience />
+        <Skills />
         <Projects />
-      </div>
-      <div className="m-8 
-      rounded-2xl md:mx-16  ">
-          <Contact />
-      </div>
+        <Contact />
+      </main>
+
       <Footer />
     </div>
-
   );
 };
 
