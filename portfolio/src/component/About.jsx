@@ -36,9 +36,9 @@ const About = () => {
 
             <div className="space-y-4 text-gray-300 leading-relaxed text-[15px] md:text-[17px]">
               <p>
-                I am a final-year IT student with a strong interest in software
+                I am a Web Developer and an Information Technology graduate with a strong interest in software
                 development and problem-solving. I enjoy building practical, beautiful web
-                applications using modern technologies like <span className="text-blue-400 font-medium">React.js</span> and <span className="text-purple-400 font-medium">Java</span>.
+                applications using modern technologies like <span className="text-blue-400 font-medium">React.js</span>.
               </p>
 
               <p>

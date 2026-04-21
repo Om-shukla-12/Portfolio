@@ -3,18 +3,25 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    id: 1,
-    title: "Software Developer Intern",
-    company: "Tech Solutions Inc.",
-    date: "June 2024 - Present",
-    description: "Developing scalable web applications using React and Node.js. Collaborating with cross-functional teams to design new features and optimize existing systems.",
+    id: 3,
+    title: "Assistant Professor",
+    company: "Asian Institute Of Technology",
+    date: "Apr 2026 - Present",
+    description: "Teaching and mentoring students in Information Technology and computer science subjects, while contributing to academic growth and curriculum development.",
   },
   {
     id: 2,
     title: "Freelance Web Developer",
     company: "Self-Employed",
-    date: "Jan 2023 - May 2024",
-    description: "Built responsive and dynamic websites for various clients. Specialized in front-end development using modern JavaScript frameworks and styling libraries like Tailwind CSS.",
+    date: "Apr 2026 - Present",
+    description: "Delivering custom web solutions to clients, focusing on responsive design, modern web frameworks like React, and creating high-quality, scalable user experiences.",
+  },
+  {
+    id: 1,
+    title: "ReactJs Intern",
+    company: "Elsner Technologies Pvt. Ltd.",
+    date: "May-Jun 2025",
+    description: "Developing scalable web applications using React. Collaborating with cross-functional teams to design new features and optimize existing systems.",
   },
 ];
 
@@ -22,8 +29,8 @@ const education = [
   {
     id: 1,
     degree: "Bachelor of Technology in Information Technology",
-    institution: "University Name",
-    date: "2021 - 2025",
+    institution: "LDRP Institute of Technology & Research (Kadi Sarva Vidhyalaya, Gandhinagar)",
+    date: "2022 - 2026",
     description: "Focused on software engineering, data structures, algorithms, and web technologies. Active member of the coding club.",
   },
 ];
@@ -35,32 +42,33 @@ const TimelineItem = ({ item, isLeft }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className={`relative flex items-center justify-between md:justify-normal w-full mb-8 ${
+      className={`relative flex flex-col md:flex-row w-full mb-8 ${
         isLeft ? "md:flex-row-reverse" : ""
-      }`}
+      } md:items-center`}
     >
       {/* Timeline Marker */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-900 z-10"></div>
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full bg-purple-500 border-2 border-[#030014] z-10 box-content"></div>
 
-      <div className="w-full md:w-5/12"></div>
+      <div className="hidden md:block md:w-5/12"></div>
 
-      <div className={`w-full md:w-5/12 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl shadow-[0_4px_20px_rgba(140,80,255,0.15)] hover:bg-white/10 transition-colors duration-300 ${isLeft ? "md:text-right" : "text-left"}`}>
-        <span className="inline-block py-1 px-3 rounded-full bg-purple-500/20 text-purple-300 text-sm font-semibold mb-3">
+      <div className={`w-full md:w-5/12 p-6 md:p-8 bg-white/5 backdrop-blur-md border border-white/5 rounded-2xl shadow-[0_4px_30px_rgba(140,80,255,0.08)] hover:bg-white/10 hover:border-white/10 transition-all duration-300 ${isLeft ? "md:text-right" : "text-left"}`}>
+        <span className="inline-block py-1 px-3 rounded-full bg-purple-500/10 text-purple-300 text-xs tracking-wider uppercase font-semibold mb-4 border border-purple-500/20">
           {item.date}
         </span>
-        <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
+        <h3 className="text-xl md:text-2xl font-bold text-white tracking-wide mb-1">
           {item.title || item.degree}
         </h3>
-        <h4 className="text-lg text-gray-300 mb-3 font-medium">
+        <h4 className="text-base text-purple-200/80 mb-3 font-medium">
           {item.company || item.institution}
         </h4>
-        <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+        <p className="text-slate-400 leading-relaxed text-sm md:text-base font-light">
           {item.description}
         </p>
       </div>
     </motion.div>
   );
 };
+
 
 const Experience = () => {
   return (

@@ -19,7 +19,7 @@ const Home = () => {
         <h2 className="text-xl sm:text-2xl font-medium text-purple-400 mb-2">
           Hi, I am
         </h2>
-        
+
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500 pb-2">
           {sentence.split("").map((char, index) => (
             <motion.span
@@ -35,13 +35,13 @@ const Home = () => {
           ))}
         </h1>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
           className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light"
         >
-          A passionate software developer who builds fast, beautiful, and futuristic web
+          A passionate Web Developer who builds fast, beautiful, and futuristic web
           experiences using <span className="text-white font-semibold">React & modern technologies</span>.
         </motion.p>
 
@@ -75,7 +75,7 @@ const Home = () => {
         <div className="relative h-48 w-48 sm:h-56 sm:w-56 lg:h-80 lg:w-80 group">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-500 to-blue-500 rounded-full blur-[80px] opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
           <div className="absolute inset-[-4px] bg-gradient-to-tr from-purple-400 to-blue-400 rounded-full animate-spin-slow opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-          
+
           <div className="absolute inset-0 rounded-full border-2 border-white/20 overflow-hidden bg-[#0a0520] z-10">
             <img
               src="image.png"
@@ -87,14 +87,14 @@ const Home = () => {
       </motion.div>
 
       {/* Scroll Down Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
       >
         <span className="text-gray-400 text-sm tracking-widest uppercase">Scroll</span>
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center p-1"

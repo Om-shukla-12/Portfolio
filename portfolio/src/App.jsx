@@ -8,7 +8,6 @@ import { Contact } from "./component/Contact";
 import Footer from "./component/Footer";
 import Skills from "./component/Skills";
 import { motion } from "framer-motion";
-
 const App = () => {
   return (
     <div className="relative min-h-screen w-full bg-[#030014] overflow-hidden text-gray-100 flex flex-col font-sans">
@@ -29,6 +28,7 @@ const App = () => {
         <Skills />
         <Projects />
         <Contact />
+       
       </main>
 
       <Footer />

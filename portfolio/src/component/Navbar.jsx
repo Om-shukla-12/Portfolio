@@ -24,14 +24,15 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300 font-medium">
+        <ul className="hidden md:flex space-x-10 text-slate-300 font-medium text-sm tracking-wide">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="hover:text-white transition-colors duration-300 hover:text-purple-400"
+                className="hover:text-white transition-all duration-300 hover:text-purple-400 relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
